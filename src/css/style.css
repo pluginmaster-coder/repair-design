@@ -373,8 +373,10 @@ template {
   color: #ffffff;
   -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-  -webkit-transition: bsh;
-  transition: bsh;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .button--primary:hover {
@@ -574,5 +576,8 @@ template {
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 14px;
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
 }
 /*# sourceMappingURL=style.css.map */
