@@ -15,10 +15,7 @@ function serveSass() {
   //   .pipe (sourcemaps.write(./))
     .pipe(dest('./src/css/'))
     .pipe(browserSync.stream());
-// Static server
 } 
-// eval (serveSass());
-// watch("./src/sass/**/*.sass)", serveSass.reload);
 
 function bs() {
     serveSass()
@@ -28,7 +25,8 @@ function bs() {
         }
     });
     watch("./src/*.html").on('change', browserSync.reload);
-    watch("./src/sass/**/*.sass, ./src/sass/**/*.scss)", serveSass.reload);
+    watch("./src/sass/**/*.sass", serveSass.reload);
+    watch("./src/sass/**/*.scss)", serveSass.reload);
     watch("./src/js/*.js").on("change", browserSync.reload);
 }
 exports.bs = bs;
