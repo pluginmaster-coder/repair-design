@@ -379,7 +379,6 @@ template {
   width: 85%;
   max-width: 1256px;
   margin: auto;
-  border: 1px solid #ee0d0d;
 }
 
 .header {
@@ -440,7 +439,6 @@ template {
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
-  border: 1px solid blue;
 }
 
 .hero__content {
@@ -480,7 +478,7 @@ template {
   text-transform: uppercase;
   text-decoration: none;
   color: #E3B873;
-  background-color: #ffffff;
+  background-color: #131313;
 }
 
 .hero__scroll-down::after {
