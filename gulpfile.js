@@ -8,7 +8,7 @@ console.log('Привет мир!');
 done();
 });
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-function serveSass() {
+function serveSaas() {
     return gulp.src("./src/sass/*.sass")
   //   .pipe (sourcemaps.init())
     .pipe(sass().on('error',sass.logError))
@@ -28,8 +28,7 @@ function bs() {
     gulp.watch("./src/*.html").on('change', browserSync.reload);
     gulp.watch("./src/js/*.js").on("change", browserSync.reload);
 }
-
-exports.serve = bs;
+exports.bs = bs;
 exports.serveSass = serveSass;
 
        
