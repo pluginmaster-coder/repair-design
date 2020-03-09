@@ -16,7 +16,6 @@ function serveSass() {
     .pipe(dest('./src/css/'))
     .pipe(browserSync.stream());
 } 
-
 function bs() {
     serveSass()
     browserSync.init({

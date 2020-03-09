@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Futura Book';
-  src: url("..ontsuturauturaBookC.woff") format("woff");
-  src: url("..ontsuturauturaBookC.woff2") format("woff");
+  src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: wrap;
@@ -9,8 +8,7 @@
 
 @font-face {
   font-family: 'Futura Demi';
-  src: url("..ontsuturauturaDemiC.woff") format("woff");
-  src: url("..ontsuturauturaDemiC.woff2") format("woff");
+  src: url("../fonts/futura/.woff") format("woff"), url("../fonts/futura/.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: wrap;
@@ -412,6 +410,11 @@ template {
 
 .contacts__phone {
   margin-right: 45px;
+}
+
+.hero {
+  background: url(../img/hero-bg.jpg);
+  height: 100vh;
 }
 
 body {
