@@ -413,8 +413,42 @@ template {
 }
 
 .hero {
-  background: url(../img/hero-bg.jpg);
+  position: relative;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat;
   height: 100vh;
+  color: #ffffff;
+  border: 1px solid blue;
+}
+
+.hero__instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  max-width: 80px;
+  height: 100%;
+}
+
+.instagram {
+  background-color: #131313;
+}
+
+.instagram__link {
+  text-transform: uppercase;
+  color: #E3B873;
+  text-decoration: none;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.title {
+  margin: 0;
 }
 
 body {
