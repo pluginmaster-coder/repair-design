@@ -3,30 +3,33 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require ('gulp-sourcemaps');
 const sass = require('gulp-sass');
 
-// gulp.task('hello', function(done){
-// console.log('Привет мир!');
-// done();
-// });
+gulp.task('hello', function(done){
+console.log('Привет мир!');
+done();
+});
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function serveSass() {
-    return src("./sass/**/*.sass")
+    return gulp.src("./src/sass/*.sass")
+  //   .pipe (sourcemaps.init())
     .pipe(sass().on('error',sass.logError))
-    .pipe(dest("./css/"))
+  //   .pipe (sourcemaps.write(./))
+    .pipe(gulp.dest("./src/css/"))
     .pipe(browserSync.stream());
 // Static server
 } 
-// function bs() {
-//     serveSass();
-//     browserSync.init({
-//         server: {
-//             baseDir: "./"
-//         }
-//     });
-//     watch("./sass/**/*.sass)", serveSass);
-//     watch("./*.html").on('change', browserSync.reload);
-//     watch("./js/*.js").on("change", browserSync.reload);
-// }
-// exports.bs = bs;
+function bs() {
+    serveSass();
+    browserSync.init({
+        server: {
+            baseDir: "./src/"
+        }
+    });
+    gulp.watch("./src/sass/**/*.sass)", serveSass);
+    gulp.watch("./src/*.html").on('change', browserSync.reload);
+    gulp.watch("./src/js/*.js").on("change", browserSync.reload);
+}
+
+exports.bs = bs;
 exports.serveSass = serveSass;
 
        
