@@ -414,7 +414,7 @@ template {
 
 .hero {
   position: relative;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
   border: 1px solid blue;
@@ -443,8 +443,8 @@ template {
   text-transform: uppercase;
   color: #E3B873;
   text-decoration: none;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .title {
