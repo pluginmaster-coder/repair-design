@@ -8,28 +8,31 @@ console.log('Привет мир!');
 done();
 });
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function serveSass() {
+    return gulp.src("./src/sass/*.sass")
+  //   .pipe (sourcemaps.init())
+    .pipe(sass().on('error',sass.logError))
+  //   .pipe (sourcemaps.write(./))
+    .pipe(gulp.dest("./src/css/"))
+    .pipe(browserSync.stream());
 // Static server
-gulp.task('serve', function() {
+} 
+function bs() {
     serveSass();
     browserSync.init({
         server: {
             baseDir: "./src/"
         }
     });
+    gulp.watch("./src/sass/**/*.sass)", serveSass);
     gulp.watch("./src/*.html").on('change', browserSync.reload);
-    gulp.watch("./src/sass/**/*.sass)", serveSass());
     gulp.watch("./src/js/*.js").on("change", browserSync.reload);
-});
-//  gulp.task('', 
-function serveSass() {
-          return gulp.src("./src/sass/*.sass")
-        //   .pipe (sourcemaps.init())
-          .pipe(sass().on('error',sass.logError))
-        //   .pipe (sourcemaps.write(./))
-          .pipe(gulp.dest("./src/css/"))
-          .pipe(browserSync.stream());
-      }      
-      gulp.task('default');
+}
+
+exports.serve = bs;
+exports.serveSass = serveSass;
+
+       
 
 
       
