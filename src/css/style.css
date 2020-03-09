@@ -452,6 +452,10 @@ template {
   max-width: 500px;
 }
 
+.hero__button {
+  margin-right: 20px;
+}
+
 .hero__instagram {
   position: absolute;
   max-width: 80px;
@@ -463,6 +467,12 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   left: 0;
   bottom: 0;
   min-width: 247px;
