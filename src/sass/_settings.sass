@@ -1,0 +1,26 @@
+*, *:before, *:after
+  box-sizing: border-box
+body 
+  font-family: 'Futura Book', sans-serif
+  font-size: 14px
+  //scroll stoped
+  // position: fixed
+  // width: 100%
+  // overflow-y: scroll
+.section
+  &-title
+    text-align: center
+    text-transform: uppercase
+    font-family: 'Yeseva One', cursive
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::before, &::after
+        content: ''
+        display: inline-block
+        vertical-align: text-top
+        width: 32px
+        height: 2px
+        background-color: $primary
+        margin: 10px 10px 10px 
