@@ -366,6 +366,9 @@ template {
 
 .button:hover {
   cursor: pointer;
+  background-color: #e0a74b;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .button--primary {
@@ -466,11 +469,18 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 40px;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .nav__item:hover {
+  -webkit-box-shadow: 10px 0px 15px 30px rgba(224, 167, 75, 0.2);
+          box-shadow: 10px 0px 15px 30px rgba(224, 167, 75, 0.2);
+  border-radius: 60%;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
   color: #E3B873;
 }
 
@@ -480,6 +490,17 @@ body {
 
 .contacts__phone {
   margin-right: 45px;
+}
+
+.contacts__phone:hover {
+  -webkit-box-shadow: 10px 0px 15px 30px rgba(224, 167, 75, 0.2);
+          box-shadow: 10px 0px 15px 30px rgba(224, 167, 75, 0.2);
+  border-radius: 60%;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  color: #E3B873;
 }
 
 .hero {
@@ -551,6 +572,25 @@ body {
   background-color: #131313;
 }
 
+.hero__scroll-down:hover {
+  -webkit-box-shadow: 10px 0px 15px 35px rgba(224, 167, 75, 0.2);
+          box-shadow: 10px 0px 15px 35px rgba(224, 167, 75, 0.2);
+  border-radius: 50%;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  background-color: #975d00;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.hero__scroll-down:hover:active {
+  color: #ffffff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
 .hero__scroll-down::after {
   content: '';
   background: url("../img/arrow-down.svg") no-repeat center;
@@ -587,6 +627,22 @@ body {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   line-height: 0.8;
+}
+
+.instagram__link:hover {
+  -webkit-box-shadow: 10px 0px 15px 35px rgba(224, 167, 75, 0.2);
+          box-shadow: 10px 0px 15px 35px rgba(224, 167, 75, 0.2);
+  border-radius: 30%;
+  -webkit-transition: -webkit-box-shadow 0.1s;
+  transition: -webkit-box-shadow 0.1s;
+  transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+}
+
+.instagram__link:hover:active {
+  color: #ffffff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .instagram__link::after {

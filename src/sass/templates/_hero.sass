@@ -41,6 +41,15 @@
     text-decoration: none
     color: $primary
     background-color: $dark
+    &:hover
+      box-shadow:  10px 0px 15px 35px rgba($secondary, 0.2)
+      border-radius: 50%
+      transition: box-shadow 0.5s
+      background-color: $lightforbtn
+      transition: background-color 0.5s
+      &:active
+        color: $light
+        transition: color 0.2s
     &::after
       content: ''
       background: url("../img/arrow-down.svg") no-repeat center
@@ -55,6 +64,7 @@
   justify-content: center
   align-items: center
   background-color: $dark
+  
   &__link
     display: flex
     align-items: center
@@ -63,12 +73,21 @@
     text-decoration: none
     transform: rotate(90deg)
     line-height: 0.8
+    &:hover
+      box-shadow:  10px 0px 15px 35px rgba($secondary, 0.2)
+      border-radius: 30%
+      transition: box-shadow 0.1s
+      &:active
+        color: $light
+        transition: color 0.2s
     &::after
       content: ''
       width: 50px
       height: 1px
       background-color: $primary
-      margin-left: 8px   
+      margin-left: 8px
+      
+        // transition: color 0.2s  
 
 .title
   margin: 0
