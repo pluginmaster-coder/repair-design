@@ -1,9 +1,54 @@
-@media screen and ( max-width: 1200px )
-  .logo
+@media screen and ( max-width: 1920px )
+  .contacts
+    &__phone--570
+      display: none
+@media screen and ( max-width: 1290px )
+  .contacts
+    &__phone--570
+      display: none
+  .nav
     display: none
-
-
+@media screen and ( max-width: 1200px )
+  .contacts
+    &__phone--570
+      display: none
+  html
+    font-size: 12px
+  .nav
+    &__item
+    margin-right: 1rem
+@media screen and ( max-width: 992px )
+  .contacts
+    &__phone--570
+      display: none
+  .nav
+    display: none
+  .hero
+    &__instagram
+      display: none
+    &__content
+      margin-left: 0  
+@media screen and ( mах-width: 760px ) // медиа не работает
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 5rem
+  .card
+    &__text
+      margin-left: 0
 @media screen and ( mах-width: 570px ) // медиа не работает
+  .contacts
+    margin: 0
+    display: flex
+    justify-content: 
+    &__phone
+      margin-right: 0
+      color: $light
+      text-decoration: none
+    &__button
+      display: none  
   .row
     flex-direction: column
     align-items: center
@@ -13,3 +58,22 @@
   .card
     &__text
       margin-left: 0   
+  .title
+    font-size: 1.64rem
+    .hero
+      &__scroll-down
+        display: none
+      &__content
+        min-width: 22.86rem
+      &__text
+        margin-bottom: 2.28rem
+        font-size: 1.29rem
+      &__button
+        display: block
+        min-width: 22.86rem
+        margin-bottom: 1.85rem
+@media screen and ( max-width: 520px )
+  .hero
+    &__scroll-down
+      display: none
+  
