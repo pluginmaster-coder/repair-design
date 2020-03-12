@@ -482,7 +482,8 @@ img {
     margin-right: 20px;
     padding: 20px 35px; }
   .hero__buttons {
-    margin-top: 0.5rem; }
+    margin-top: 0.5rem;
+    border: 1px solid green; }
   .hero__instagram {
     max-width: 80px;
     height: 100%; }
@@ -641,15 +642,13 @@ img {
     margin-left: 0; } }
 
 @media screen and (mах-width: 570px) {
-  .contacts {
-    margin: 0; }
-    .contacts__phone {
-      margin-right: 0;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 2rem; }
-    .contacts__button {
-      display: none; }
+  .contacts__button {
+    display: none; }
+  .contacts__phone {
+    margin-right: 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem; }
   .row {
     flex-direction: column;
     align-items: center; }
