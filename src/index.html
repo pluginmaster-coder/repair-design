@@ -23,13 +23,13 @@
             <a href="#" class="nav__item">Контакты</a>
          </nav>
          <div class="contacts menu__contacts">
-            <div class="contacts__phone--hide">
+            <!-- <div class="contacts__phone--hide"> -->
                <a href="tel:+7(999)7683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-            </div>
+            <!-- </div> -->
             
-            <div class="contacts__button--hide">
+            <!-- <div class="contacts__button--hide"> -->
                <button class="button contacts__button button--primary">Заказать звонок</button>
-            </div> 
+            <!-- </div>  -->
             <!-- <a href="tel:+7(999)7683299" class="phone contacts__phone--570">+7 (999) 768-32-99<br>Заказать звонок</a> -->
          </div>
       </div>
@@ -204,6 +204,7 @@
 <!-- !!!!!!!!!!!!!! СЕКЦИЯ ДИЗАЙН ПРОЕКТ !!!!!!!!!!!!!!!!!!!!! -->
    <section class="section types">
       <div class="container">
+       <div class="back__design">
          <div class="section-title types__section-title">
             <h2 class="section-title__heading">Дизайн проект</h2>
             <!-- /.section-title__heading -->
@@ -340,11 +341,39 @@
             <!-- /.col -->
          </div>
          <!-- /.row -->
+       </div>
+       <!-- back__design -->
       </div>
       <!-- /.container -->
    </section>
    <!-- /.section types -->
    <!-- ________________________________________ -->
+   
 </main>
+<div class="background__design">
+   <p>dsfsdfdsfsdfsdfsdfdsfdsfsdfsdf</p>
+</div>
+<div class="modal">
+   <div class="modal__dialog">
+      <h3 class="modal__title">
+         Оставьте заявку и наш менеджер свяжется с вами
+      </h3>
+      <form action="#" class="form modal__form">
+         <label for="user-name" class="label form__label">Имя</label>
+         <input type="text" class="input form__input" id="user-name">
+         <label for="user-phone" class="label form__label">Телефон</label>
+         <input type="tel" class="input form__input" id="user-phone">
+         <label for="user-email" class="label form__label">Email</label>
+         <input type="email" class="input form__input" id="user-email">
+         <div class="policy">
+            <input type="checkbox" name="policy-checkbox" id="policy-checkbox">
+            <label for="policy-checkbox">Я соглашаюсь с обработкой данных</label>
+         </div>
+      </form>
+      <!-- /.form modal__form -->
+   </div>
+   <!-- /.modal__dialog -->
+</div>
+<!-- /.modal -->
 </body>
 </html>

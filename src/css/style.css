@@ -484,8 +484,7 @@ img {
     margin-right: 20px;
     padding: 20px 35px; }
   .hero__buttons {
-    margin-top: 0.5rem;
-    border: 1px solid green; }
+    margin-top: 0.5rem; }
   .hero__instagram {
     max-width: 80px;
     height: 100%; }
@@ -563,6 +562,12 @@ img {
 
 .types__section-title {
   margin-bottom: 2rem; }
+
+.background__design {
+  width: 100%;
+  height: 50rem;
+  margin-top: -37rem;
+  background-color: #131313; }
 
 .row {
   display: flex;
