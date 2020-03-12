@@ -6,9 +6,11 @@
   // .contacts
   //   &__phone--570
   //     display: none
+  // .nav
+    // display: none
+@media screen and ( max-width: 1230px )
   .nav
     display: none
-@media screen and ( max-width: 1200px )
   // .contacts
   //   &__phone--570
   //     display: none
@@ -36,23 +38,28 @@
       display: none
     &__content
       margin-left: 0  
-@media screen and ( mах-width: 760px ) // медиа не работает
-  .row
-    flex-direction: column
-    align-items: center
-  .types
-    &__card
-      margin-bottom: 5rem
-  .card
-    &__text
-      margin-left: 0
+// @media screen and ( mах-width: 760px ) // медиа не работает
+//   .row
+//     flex-direction: column
+//     align-items: center
+//   .types
+//     &__card
+//       margin-bottom: 5rem
+//   .card
+//     &__text
+//       margin-left: 0
 @media screen and ( mах-width: 570px ) // медиа не работает
+  // .menu
+  //   display: flex
+  //   flex-direction: column
   .contacts
+    // &__phone--hide
+    //   display: none
     // margin: 0
     // display: flex
     // justify-content: center
-    &__button
-      display: none
+    // &__button--hide
+    //   display: none
     &__phone
       margin-right: 0
       color: $light
@@ -81,8 +88,19 @@
         display: block
         min-width: 22.86rem
         margin-bottom: 1.85rem
+
+
 @media screen and ( max-width: 520px )
   .hero
     &__scroll-down
       display: none
+.menu
+  // display: flex
+  // flex-direction: column
+  &__contacts
+    // display: block
+.contacts
+  &__phone--hide
+    // display: none
+
   
