@@ -38,58 +38,48 @@
       display: none
     &__content
       margin-left: 0  
-// @media screen and ( mах-width: 760px ) // медиа не работает
-//   .row
-//     flex-direction: column
-//     align-items: center
+@media screen and ( mах-width: 768px ) // медиа не работает
+  //  .row
+  //   flex-direction: column
+  //   align-items: center
 //   .types
 //     &__card
 //       margin-bottom: 5rem
 //   .card
 //     &__text
 //       margin-left: 0
-@media screen and ( mах-width: 570px ) // медиа не работает
-  // .menu
-  //   display: flex
-  //   flex-direction: column
+@media screen and ( mах-width: 576px ) // медиа не работает
+  .hero
+    &__scroll-down
+      display: none
+    &__content
+      min-width: 22.86rem
+    &__text
+      margin-bottom: 2.28rem
+        font-size: 1.29rem
+    &__button
+      display: block
+      min-width: 22.86rem
+      margin-bottom: 1.85rem
   .contacts
-    // &__phone--hide
-    //   display: none
-    // margin: 0
-    // display: flex
-    // justify-content: center
-    // &__button--hide
-    //   display: none
     &__phone
       margin-right: 0
       color: $light
       text-decoration: none
       font-size: 2rem
-  .row
-    flex-direction: column
-    align-items: center
-  .types
-    &__card
-      margin-bottom: 5rem
-  .card
-    &__text
-      margin-left: 0   
+    &__button
+      display: none
+    // .row
+  //   flex-direction: column
+  //   align-items: center
+  // .types
+  //   &__card
+  //     margin-bottom: 5rem
+  // .card
+  //   &__text
+  //     margin-left: 0   
   .title
     font-size: 1.64rem
-    .hero
-      &__scroll-down
-        display: none
-      &__content
-        min-width: 22.86rem
-      &__text
-        margin-bottom: 2.28rem
-        font-size: 1.29rem
-      &__button
-        display: block
-        min-width: 22.86rem
-        margin-bottom: 1.85rem
-
-
 @media screen and ( max-width: 520px )
   .hero
     &__scroll-down
