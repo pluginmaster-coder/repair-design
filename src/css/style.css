@@ -642,7 +642,7 @@ img {
     min-width: 22.86rem; }
   .hero__text {
     margin-bottom: 2.28rem;
-      margin-bottom-font-size: 1.29rem; }
+    font-size: 1.29rem; }
   .hero__button {
     display: block;
     min-width: 22.86rem;
