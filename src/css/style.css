@@ -473,7 +473,7 @@ img {
     position: relative;
     line-height: 131%;
     font-size: 1.57rem;
-    max-width: 500px;
+    max-width: 35.7142rem;
     margin: 0;
     margin-bottom: 3rem;
     margin-top: 1rem; }
@@ -560,13 +560,6 @@ img {
 
 .types__section-title {
   margin-bottom: 2rem; }
-  .types__section-title__text--prelude {
-    font-family: 'Futura Book', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center; }
 
 .row {
   display: flex;
@@ -615,29 +608,24 @@ img {
 .card__list li {
   list-style-type: none; }
 
-@media screen and (max-width: 1920px) {
-  .contacts__phone--570 {
-    display: none; } }
-
 @media screen and (max-width: 1290px) {
-  .contacts__phone--570 {
-    display: none; }
   .nav {
     display: none; } }
 
 @media screen and (max-width: 1200px) {
-  .contacts__phone--570 {
-    display: none; }
   html {
     font-size: 12px; }
   .nav {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
-  .contacts__phone--570 {
-    display: none; }
-  .nav {
-    display: none; }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .card {
+    margin-bottom: 5rem; }
+    .card__text {
+      margin-left: 0; }
   .hero__instagram {
     display: none; }
   .hero__content {
@@ -654,12 +642,12 @@ img {
 
 @media screen and (mах-width: 570px) {
   .contacts {
-    margin: 0;
-    display: flex; }
+    margin: 0; }
     .contacts__phone {
       margin-right: 0;
       color: #ffffff;
-      text-decoration: none; }
+      text-decoration: none;
+      font-size: 2rem; }
     .contacts__button {
       display: none; }
   .row {
