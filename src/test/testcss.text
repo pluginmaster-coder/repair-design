@@ -1,0 +1,17 @@
+ 
+ //_settings //
+ 
+  &--dark
+    background-color: $dark
+    color: $light
+  &-title
+    text-align: center
+    &--left
+      text-align: left
+    &__heading  
+      text-align: center
+      text-transform: uppercase
+      &--primary
+        color: $primary
+    &__word
+      display: block

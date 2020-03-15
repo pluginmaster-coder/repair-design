@@ -372,11 +372,57 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label::after {
+    content: 'bug: не видно новый checkbox';
+    width: 90px;
+    height: 2px;
+    background-color: #E3B873;
+    color: red;
+    margin-left: 2rem; }
+
+.buttonup {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  transition: background-color .3s;
+  z-index: 1000; }
+  .buttonup:hover {
+    cursor: pointer;
+    background-color: #333; }
+  .buttonup:active {
+    background-color: #555; }
+  .buttonup::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff; }
 
 .container {
   width: 85%;
   max-width: 1256px;
   margin: auto; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  flex-basis: 50%;
+  border: 1px solid orange; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -393,10 +439,35 @@ img {
 
 .section {
   padding: 60px; }
+  .section--dark {
+    background-color: #131313;
+    color: #ffffff; }
   .section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
+    text-align: center; }
+    .section-title--left {
+      text-align: left; }
+    .section-title__heading {
+      font-family: 'Yeseva One', cursive;
+      text-transform: uppercase;
+      line-height: 138%; }
+      .section-title__heading--primary {
+        color: #E3B873; }
+    .section-title__word {
+      display: block;
+      align-items: center; }
+      .section-title__word::after {
+        content: 'палочка не появляется';
+        width: 90px;
+        height: 2px;
+        font-size: 6px;
+        background-color: #E3B873;
+        color: #d60f0f;
+        margin-left: 2rem;
+        border: 1px solid #E3B873; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -597,14 +668,6 @@ img {
   height: 50rem;
   margin-top: -35.7rem;
   background-color: #131313; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;

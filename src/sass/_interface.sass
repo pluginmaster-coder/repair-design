@@ -44,8 +44,7 @@
   &__checkbox
   //  opacity: 0 
   //  visibility: hidden
-   &::checked +
-     .policy_label
+   &::checked +.policy_label
        &::before
          background: $primary url(../img/check.svg) no repeat center / 0.8rem
   &__label
@@ -59,8 +58,42 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
+      // !!!!!!!!!!!!!КРИК СИСТЕМЫ ОБ ОШИБКАХ!!!!!!!!
+    &::after
+      content: 'bug: не видно новый checkbox'
+      width: 90px
+      height: 2px
+      background-color: $primary
+      color: red
+      margin-left: 2rem
+      // border: 1px solid
   
-       
+.buttonup 
+  display: inline-block
+  background-color: #FF9800
+  width: 50px
+  height: 50px
+  text-align: center
+  border-radius: 4px
+  margin: 30px
+  position: fixed
+  bottom: 30px
+  right: 10px
+  transition: background-color .3s
+  z-index: 1000
+  &:hover 
+    cursor: pointer;
+    background-color: #333
+  &:active 
+    background-color: #555
+  &::after 
+    content: "\f077"
+    font-family: FontAwesome
+    font-weight: normal
+    font-style: normal
+    font-size: 2em
+    line-height: 50px
+    color: #fff
 
 
 

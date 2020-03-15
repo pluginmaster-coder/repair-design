@@ -13,11 +13,35 @@ img
   max-width: 100%
 .section
   padding: 60px
+  &--dark
+    background-color: $dark
+    color: $light 
   &-title
-    &__heading  
     text-align: center
-    text-transform: uppercase
-    font-family: 'Yeseva One', cursive
+    &--left
+      text-align: left
+    &__heading
+      font-family: 'Yeseva One', cursive  
+      text-transform: uppercase
+      line-height: 138%
+      &--primary
+       color: $primary
+    &__word
+      display: block
+      align-items: center
+      &::after
+        content: 'палочка не появляется'
+        width: 90px
+        height: 2px
+        font-size: 6px        
+        background-color: $primary
+        color: #d60f0f
+        margin-left: 2rem
+        border: 1px solid $primary
+    &__text
+      font-size: 1.28rem
+      line-height: 2.07rem
+      max-width: 31.57rem
     &__image
       display: flex
       justify-content: center
