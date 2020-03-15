@@ -15,3 +15,10 @@
         color: $primary
     &__word
       display: block
+
+
+    html  emmet к слайдеру, не так развернулся
+    (.swiper-slide>.swiper-slide__text>h3.swiper-slide__heading{Город:}+span.swiper-slide__value{Ростов-на-Дону})*4|c
+
+    ----------------------
+  где стрелочка prev?

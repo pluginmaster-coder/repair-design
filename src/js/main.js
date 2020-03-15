@@ -36,12 +36,36 @@ $(document).ready(function () {
   });
   closeBtn.on('click', function(){
     modal.toggleClass('modal--visible');
-  });
-  //initialize swiper when document ready
+  }); 
+
   var mySwiper = new Swiper ('.swiper-container', {
-    loop: true
-  })
-  
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var next = $('.swiper-button-prev')
+  var prev = $('.swiper-button-next')
+  var bullets = $('.swiper-pagination')
+
+  next.css('left', prev.width() + 10 + bullets.width() +10)
+  bullets.css('left', prev.width() + 10)
+});
+    // $('body').keypress(function(e){
+    //   alert(e.which);
+    //   if(e.which == 27){
+    //       // Close my modal window
+    //   }
+
+ 
+  //initialize swiper when document ready, СЛАЙДЕР
+
+
 // $(document).on("click", function(e){
 //     if (e.target == modal) {
 //         modal.remove('modal--visible');
@@ -88,7 +112,7 @@ $(document).ready(function () {
 // 		}
 // 	});
 	
-});
+
 // конец модального окна на jquery
 
 // КНОПКА 
