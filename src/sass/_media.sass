@@ -26,14 +26,14 @@
       display: none
 @media screen and ( max-width: 576px ) // медиа не работает
   html
-    font-size: 14px
+    font-size: 12px !important
   .hero
     &__scroll
       &-down
-        display: none
+        display: none !important
   .contacts
     &__button
-      display: none
+      display: none !important
   //   &__content
   //     min-width: 22.86rem
   //   &__text
@@ -53,7 +53,14 @@
   //     display: none
   // .title
   //   font-size: 1.64rem
-// @media screen and ( max-width: 520px )
+@media screen and ( max-width: 520px )
+  .contacts
+    &__phone
+      color: $light
+      margin: 0
+  .button
+    &--primary
+      margin-bottom: 26px
 
 //     // &::after
 //       // display: none
@@ -62,10 +69,7 @@
 //   // flex-direction: column
 //   &__contacts
 //     // display: block
-// .contacts
-//   &__button
-//     // display: none
-//   &__phone--hide
-//     // display: none
+
+    // display: none
 
   

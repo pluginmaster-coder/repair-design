@@ -866,8 +866,15 @@ h3 {
 
 @media screen and (max-width: 576px) {
   html {
-    font-size: 14px; }
+    font-size: 12px !important; }
   .hero__scroll-down {
-    display: none; }
+    display: none !important; }
   .contacts__button {
-    display: none; } }
+    display: none !important; } }
+
+@media screen and (max-width: 520px) {
+  .contacts__phone {
+    color: #ffffff;
+    margin: 0; }
+  .button--primary {
+    margin-bottom: 26px; } }
