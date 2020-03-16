@@ -36,7 +36,22 @@ $(document).ready(function () {
   });
   closeBtn.on('click', function(){
     modal.toggleClass('modal--visible');
-  }); 
+  });
+
+  	// Закрытие по клавише Esc.
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.modal').toggleClass('modal--visible');
+		}
+	});
+	
+	// Клик по фону, но не по окну.
+	$('.modal').click(function(e) {
+		if ($(e.target).closest('.modal__dialog').length == 0) {
+			$(this).toggleClass('modal--visible');			
+		}
+	});
 // СЛАЙДЕР НА JQUERY
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -48,9 +63,7 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    // renderBullet: function (index, className) {
-    //   return '<span class="' + '.swiper-slide__value--six' + '">' + (index + 1) + '</span>';
-    // }
+
   });
   var prev = $('.swiper-button-prev');
   var next = $('.swiper-button-next');
