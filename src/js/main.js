@@ -37,7 +37,7 @@ $(document).ready(function () {
   closeBtn.on('click', function(){
     modal.toggleClass('modal--visible');
   }); 
-
+// СЛАЙДЕР НА JQUERY
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
     pagination: {
@@ -48,14 +48,46 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    // renderBullet: function (index, className) {
+    //   return '<span class="' + '.swiper-slide__value--six' + '">' + (index + 1) + '</span>';
+    // }
   });
-  var next = $('.swiper-button-prev')
-  var prev = $('.swiper-button-next')
-  var bullets = $('.swiper-pagination')
+  var prev = $('.swiper-button-prev');
+  var next = $('.swiper-button-next');
+  var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 10 + bullets.width() +10)
-  bullets.css('left', prev.width() + 10)
+  next.css('left', prev.width() + 10 + bullets.width() +10);
+  bullets.css('left', prev.width() + 10);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // $('body').keypress(function(e){
     //   alert(e.which);
     //   if(e.which == 27){
