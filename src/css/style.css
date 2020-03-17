@@ -566,8 +566,6 @@ img {
   z-index: 99;
   background-color: #131313;
   padding: 24px 0; }
-  .header__menu {
-    margin-left: -17.3rem; }
 
 .menu {
   display: flex;
@@ -588,9 +586,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 2.5rem;
-  transition: color 0.3s;
-  margin-left: 11px;
-  padding-right: 0px; }
+  transition: color 0.3s; }
   .nav__item:hover {
     box-shadow: 10px 0px 15px 30px rgba(224, 167, 75, 0.2);
     border-radius: 60%;
@@ -852,7 +848,33 @@ h3 {
   .modal__button {
     align-self: flex-end; }
 
+@media screen and (max-width: 1920px) {
+  .logo {
+    margin-left: -245px; } }
+
+@media screen and (max-width: 1820px) {
+  .logo {
+    margin-left: -185px; } }
+
+@media screen and (max-width: 1720px) {
+  .logo {
+    margin-left: -135px; } }
+
+@media screen and (max-width: 1620px) {
+  .logo {
+    margin-left: -95px; } }
+
+@media screen and (max-width: 1520px) {
+  .logo {
+    margin-left: -55px; } }
+
+@media screen and (max-width: 1420px) {
+  .logo {
+    margin-left: -25px; } }
+
 @media screen and (max-width: 1200px) {
+  .logo {
+    margin-left: -5px; }
   html {
     font-size: 12px; } }
 
