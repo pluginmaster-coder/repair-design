@@ -1,4 +1,4 @@
-@media screen and ( max-width: 1230px )
+@media screen and ( max-width: 1200px )
   html
     font-size: 12px
 @media screen and ( max-width: 992px )
@@ -27,6 +27,10 @@
 @media screen and ( max-width: 576px ) // медиа не работает
   html
     font-size: 12px !important
+  .contacts
+    &__phone
+      color: $light
+      margin: 0  
   .hero
     &__scroll
       &-down
@@ -56,23 +60,30 @@
   // .title
   //   font-size: 1.64rem
 @media screen and ( max-width: 520px )
-  .contacts
-    &__phone
-      color: $light
-      margin: 0
   .button
     &--primary
       margin-bottom: 26px
-
-
-//     // &::after
-//       // display: none
-// .menu
-//   // display: flex
-//   // flex-direction: column
-//   &__contacts
-//     // display: block
-
-    // display: none
+  .hero
+    &__content
+      padding-left: 1.88rem
+    &__text
+      margin-right: 0
+      padding-right: 1.88rem
+@media screen and ( max-width: 500px )
+  .hero
+    &__title
+      font-size: 28px
+  .button
+    &--primary
+      min-width: 20rem 
+    &--outline
+      min-width: 20rem
+@media screen and ( max-width: 380px )
+  .button
+    &--primary
+      margin-bottom: 16px
+      max-width: 12rem 
+    &--outline
+      max-width: 12rem 
 
   

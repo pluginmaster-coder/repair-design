@@ -853,7 +853,7 @@ h3 {
   .modal__button {
     align-self: flex-end; }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1200px) {
   html {
     font-size: 12px; } }
 
@@ -882,6 +882,9 @@ h3 {
 @media screen and (max-width: 576px) {
   html {
     font-size: 12px !important; }
+  .contacts__phone {
+    color: #ffffff;
+    margin: 0; }
   .hero__scroll-down {
     display: none !important; }
   .contacts__button {
@@ -890,8 +893,25 @@ h3 {
     min-height: 90px !important; } }
 
 @media screen and (max-width: 520px) {
-  .contacts__phone {
-    color: #ffffff;
-    margin: 0; }
   .button--primary {
-    margin-bottom: 26px; } }
+    margin-bottom: 26px; }
+  .hero__content {
+    padding-left: 1.88rem; }
+  .hero__text {
+    margin-right: 0;
+    padding-right: 1.88rem; } }
+
+@media screen and (max-width: 500px) {
+  .hero__title {
+    font-size: 28px; }
+  .button--primary {
+    min-width: 20rem; }
+  .button--outline {
+    min-width: 20rem; } }
+
+@media screen and (max-width: 380px) {
+  .button--primary {
+    margin-bottom: 16px;
+    max-width: 12rem; }
+  .button--outline {
+    max-width: 12rem; } }
