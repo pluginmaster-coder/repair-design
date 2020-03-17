@@ -579,14 +579,16 @@ img {
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
-  line-height: 16px; }
+  line-height: 16px;
+  margin-left: -51px; }
 
 .nav__item {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 2.5rem;
-  transition: color 0.3s; }
+  transition: color 0.3s;
+  margin-left: 11px; }
   .nav__item:hover {
     box-shadow: 10px 0px 15px 30px rgba(224, 167, 75, 0.2);
     border-radius: 60%;
