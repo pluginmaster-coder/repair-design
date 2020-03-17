@@ -382,7 +382,7 @@ template {
 
 .buttonup {
   display: inline-block;
-  background-color: red;
+  background-color: #E3B873;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -896,22 +896,22 @@ h3 {
   .button--primary {
     margin-bottom: 26px; }
   .hero__content {
-    padding-left: 1.88rem; }
+    padding-left: 1.3rem;
+    padding-right: 1.88rem; }
   .hero__text {
-    margin-right: 0;
-    padding-right: 1.88rem; } }
+    margin-right: 0; }
+  .buttonup {
+    margin: 10px;
+    bottom: 10px;
+    border-radius: 5px; } }
 
 @media screen and (max-width: 500px) {
   .hero__title {
     font-size: 28px; }
   .button--primary {
-    min-width: 20rem; }
+    width: 100%;
+    min-width: auto;
+    margin-right: 1rem; }
   .button--outline {
-    min-width: 20rem; } }
-
-@media screen and (max-width: 380px) {
-  .button--primary {
-    margin-bottom: 16px;
-    max-width: 12rem; }
-  .button--outline {
-    max-width: 12rem; } }
+    width: 100%;
+    min-width: auto; } }
