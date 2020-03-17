@@ -68,33 +68,42 @@
       margin-left: 2rem
       // border: 1px solid
   
-.buttonup 
-  display: inline-block
-  background-color: $primary
-  // background-color: red
-  width: 50px
-  height: 50px
-  text-align: center
-  border-radius: 4px
-  margin: 30px
-  position: fixed
-  bottom: 30px
-  right: 10px
+.buttonup
+  background: $primary url(up.png) center center no-repeat;
+  width: 50px;
+  height: 50px;
+  color: #fff;			
+  padding: 15px;
+  margin: 20px;
+  margin-top: 450px
+  // display: inline-block
+  // background-color: $primary
+  // // background-color: red
+  // width: 50px
+  // height: 50px
+  // text-align: center
+  border-radius: 5px
+  // margin: 30px
+  // position: fixed
+  // bottom: 30px
+  // right: 10px
   transition: background-color .3s
-  z-index: 1000
+  // z-index: 1000
   &:hover 
     cursor: pointer;
-    background-color: #333
-  &:active 
-    background-color: #555
+  //   background-color: #080808
+  // &:active 
+  //   background-color: #555
   &::after 
     content: "\f077"
+    margin-bottom: 1px
     font-family: FontAwesome
     font-weight: normal
     font-style: normal
-    font-size: 2em
+    font-size: 1.5em
     line-height: 50px
     color: #fff
+
 
 
 

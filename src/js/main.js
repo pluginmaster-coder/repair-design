@@ -75,23 +75,90 @@ $(document).ready(function () {
 
 // КНОПКА 
 // НАВЕРХ
-jQuery(document).ready(function() {
+// jQuery(document).ready(function() {
   
-  var btn = $('.buttonup');
+//   var btn = $('.buttonup');
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-      btn.addClass('show');
-    } else {
-      btn.removeClass('show');
-    }
-  });
+//   $(window).scroll(function() {
+//     if ($(window).scrollTop() > 300) {
+//       btn.addClass('show');
+//     } else {
+//       btn.removeClass('show');
+//     }
+//   });
 
-  btn.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
-  });
+//   btn.on('click', function(e) {
+//     e.preventDefault();
+//     $('html, body').animate({scrollTop:0}, '300');
+//   });
 
-});
+// });
 
 // конец кнопки наверх
+
+// реализация НАВЕРХ, с исчезновением на главном экране
+// $(function() {
+ 
+//   $(window).scroll(function() {
+   
+//   if($(this).scrollTop() != 0) {
+   
+//   $('#toTop').fadeIn();
+   
+//   } else {
+   
+//   $('#toTop').fadeOut();
+   
+//   }
+   
+//   });
+   
+//   $('#toTop').click(function() {
+   
+//   $('body,html').animate({scrollTop:0},800);
+//   //  return false;
+//   });
+   
+//   });
+
+(function(jq) {
+  jq.autoScroll = function(ops) {
+    ops = ops || {};
+    ops.styleClass = ops.styleClass || 'buttonup';
+    var t = jq('<div class="'+ops.styleClass+'"></div>'),
+   d = jq(ops.target || document);
+   jq(ops.container || 'body').append(t);
+ 
+  t.css({
+    opacity: 0,
+    position: 'absolute',
+    top: 0,
+    right: 0
+ }).on('click', function() {
+	 jq('html,body').animate({
+	    scrollTop: 0
+   }, ops.scrollDuration || 1000);
+ });
+ 
+  d.scroll(function() {
+    var sv = d.scrollTop();
+    if (sv < 300) {
+      t.clearQueue().fadeOut(ops.hideDuration || 200);
+	 return;
+  }
+ 
+  t.css('display', '').clearQueue().animate({
+   top: sv,
+   opacity: 0.8
+   }, ops.showDuration || 500);
+  });
+  };
+})(jQuery);
+ 
+$(document).ready(function(){
+ $.autoScroll({
+ scrollDuration: 600, 
+ showDuration: 600, 
+ hideDuration: 300
+ });
+});
