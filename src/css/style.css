@@ -481,6 +481,21 @@ img {
         background-color: #E3B873;
         margin: 10px 10px 10px; }
 
+.section-video {
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  display: table;
+  z-index: 299;
+  background-size: cover; }
+
+.wrap-block {
+  display: table-cell;
+  vertical-align: middle;
+  color: #E3B873; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
