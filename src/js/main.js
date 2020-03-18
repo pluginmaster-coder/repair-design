@@ -59,68 +59,73 @@ $(document).ready(function () {
       el: '.swiper-pagination',
       type: 'bullets'
     },
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+      // oneEl: '.swiper-button-1',
+      // twoEl: '.swiper-button-2',
+      // threeEl: '.swiper-button-3',
+      // fourEl: '.swiper-button-4',
+      // fiveEl: '.swiper-button-5',
+      // sixEl: '.swiper-button-6',
     },
+    
 
   });
   var prev = $('.swiper-button-prev');
   var next = $('.swiper-button-next');
   var bullets = $('.swiper-pagination');
+  // var one = $('.swiper-button-1');
+  // var two = $('.swiper-button-2');
+  // var three = $('.swiper-button-3');
+  // var four = $('.swiper-button-4');
+  // var five = $('.swiper-button-5');
+  // var six = $('.swiper-button-6');
+  // var fraction = $('.swiper-pagination_fraction');
 
   next.css('left', prev.width() + 10 + bullets.width() +10);
   bullets.css('left', prev.width() + 10);
+
+
+
 });
+
+// jQuery(function($) {
+ 
+//   $('.swiper-object .swiper-container').each(function(index, value) {
+ 
+//     var mySwiper = new Swiper(value, {
+//       autoplay: {
+//         delay: 5000,
+//       },
+      
+//       navigation: {
+//         // nextEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
+//         // nextEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
+//         // nextEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
+//         // twoEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
+//         threeEl: value.nextElementSibling.nextElementSibling.nextElementSibling,
+//         twoEl: value.nextElementSibling.nextElementSibling,
+//         oneEl: value.nextElementSibling,
+//       },
+//       pagination: {
+//         el: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
+//         clickable: true,
+//         renderBullet: function (index, className) {
+//           return '<span class="' + className + '">' + (index + 1) + '</span>';
+//         },
+//       },
+//       slidesPerView: 'auto',
+//     });
+ 
+//   });
+// });
+
+
 
 // КНОПКА 
 // НАВЕРХ
-// jQuery(document).ready(function() {
-  
-//   var btn = $('.buttonup');
-
-//   $(window).scroll(function() {
-//     if ($(window).scrollTop() > 300) {
-//       btn.addClass('show');
-//     } else {
-//       btn.removeClass('show');
-//     }
-//   });
-
-//   btn.on('click', function(e) {
-//     e.preventDefault();
-//     $('html, body').animate({scrollTop:0}, '300');
-//   });
-
-// });
-
-// конец кнопки наверх
-
-// реализация НАВЕРХ, с исчезновением на главном экране
-// $(function() {
- 
-//   $(window).scroll(function() {
-   
-//   if($(this).scrollTop() != 0) {
-   
-//   $('#toTop').fadeIn();
-   
-//   } else {
-   
-//   $('#toTop').fadeOut();
-   
-//   }
-   
-//   });
-   
-//   $('#toTop').click(function() {
-   
-//   $('body,html').animate({scrollTop:0},800);
-//   //  return false;
-//   });
-   
-//   });
-
 (function(jq) {
   jq.autoScroll = function(ops) {
     ops = ops || {};
