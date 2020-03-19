@@ -451,14 +451,14 @@ img {
       display: block;
       align-items: center; }
       .section-title__word::after {
-        content: 'палочка не появляется';
-        width: 90px !important;
-        height: 2px !important;
+        content: '';
+        display: inline-block;
+        width: 90px;
+        height: 2px;
         font-size: 6px;
+        margin-bottom: 6px;
         background-color: #E3B873;
-        color: #d60f0f;
-        margin-left: 2rem;
-        border: 1px solid #E3B873; }
+        margin-left: 2rem; }
     .section-title__text {
       font-size: 1.28rem;
       line-height: 2.07rem;
