@@ -35,18 +35,18 @@
   background-color: transparent
   border: none
   border-bottom: 1px solid rgba(54, 54, 54, 0.3)
-  font-size: 1.85rem
+  font-size: 1.285rem
   color: $light
   padding: 0.5rem 0
   &::placeholder
     color: $light
 .policy
   &__checkbox
-  //  opacity: 0 
-  //  visibility: hidden
-   &::checked +.policy_label
-       &::before
-         background: $primary url(../img/check.svg) no repeat center / 0.8rem
+    opacity: 0 
+    visibility: hidden
+    &:checked + .policy__label
+      &::before
+        background: $primary url('../img/check.svg') no-repeat center / 0.8rem
   &__label
     display: flex
     align-items: center
@@ -54,20 +54,19 @@
       content: ''
       width: 18px
       height: 18px
-      bottom: 1px solid $primary
+      border: 1px solid $primary
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
       // !!!!!!!!!!!!!КРИК СИСТЕМЫ ОБ ОШИБКАХ!!!!!!!!
-    &::after
-      content: 'bug: не видно новый checkbox'
-      width: 90px
-      height: 2px
-      background-color: $primary
-      color: red
-      margin-left: 2rem
+    // &::after
+    //   content: 'bug: не видно новый checkbox'
+    //   width: 90px
+    //   height: 2px
+    //   background-color: $primary
+    //   color: red
+    //   margin-left: 2rem
       // border: 1px solid
-  
 .buttonup
   background: $primary url(up.png) center center no-repeat;
   width: 50px;

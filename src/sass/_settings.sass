@@ -5,10 +5,6 @@ html
 body 
   font-family: 'Futura Book', sans-serif
   font-size: 1rem
-  //scroll stoped
-  // position: fixed
-  // width: 100%
-  // overflow-y: scroll
 img
   max-width: 100%
 .section
@@ -20,6 +16,8 @@ img
     text-align: center
     &--left
       text-align: left
+    &--light
+      color: $light
     &__heading
       font-family: 'Yeseva One', cursive  
       text-transform: uppercase
@@ -31,8 +29,8 @@ img
       align-items: center
       &::after
         content: 'палочка не появляется'
-        width: 90px
-        height: 2px
+        width: 90px !important
+        height: 2px !important
         font-size: 6px        
         background-color: $primary
         color: #d60f0f
