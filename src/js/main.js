@@ -24,7 +24,54 @@
 //   closeBtn.addEventListener('click', switchModal);
 
 // }); 
+// function getScrollTop(){
+//   if(typeof pageYOffset!= 'undefined'){
+//     return pageYOffset;
+//   }
+//   else{
+//     var b = document.body;
+//     var d = document.documentElement;
+//     d = (d.clientHeight)? d : b;
+//     return d.scrollTop;
+//   }
+// }     
+// $(window).on("scroll", function(){
+//   if(getScrollTop() >= 100){
+//     $(window).off("scroll");
+//     $('.control__section-title').transition({ opacity: 1 });
+//   };
+// });
 
+var block_show = false;
+
+function scrollTracking(){
+	if (block_show) {
+		return false;
+	}
+
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $('.active').offset().top;
+	var eh = $('.active').outerHeight();
+	var dh = $(document).height();   
+ 
+	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+		block_show = true;
+		
+		// Код анимации
+		$('.active div:eq(0)').show('fast', function(){
+			$(this).next().show('fast', arguments.callee);
+		});
+	}
+}
+
+$(window).scroll(function(){
+	scrollTracking();
+});
+	
+$(document).ready(function(){ 
+	scrollTracking();
+});
 // МОДАЛЬНОЕ ОКНО НА JQUERY
 $(document).ready(function () {
   var modal = $('.modal'),
@@ -71,7 +118,6 @@ $(document).ready(function () {
       // sixEl: '.swiper-button-6',
     },
     
-
   });
   var prev = $('.swiper-button-prev');
   var next = $('.swiper-button-next');
@@ -87,8 +133,57 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullets.width() +10);
   bullets.css('left', prev.width() + 10);
 
-//Валидация формы
+//Валидация формы MODAL FORM___________________________________________________________________MODAL
   $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "label",
+    rules: {
+      // строчное правило. simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правило-объект.  compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух и не длиннее 15 букв",
+        maxlength: "Имя не короче двух и не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите email в формате name@domain.com"
+      }
+    },
+     submitHandler: function(form) {
+      //  $(form).ajaxSubmit();
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        // dataType: "dataType",
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          alert('Перезвоним через 10 минут');
+          modal.toggleClass('modal--visible');
+        }
+      });
+      }
+  });
+    //маска для номера телефона
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+    // _________________________________!!!______________________________
+    //Валидация формы В ФУТЕРЕ_________________________________________________________FOOTER
+  $('.footer__form').validate({
     errorClass: "invalid",
     errorElement: "label",
     rules: {
@@ -120,7 +215,77 @@ $(document).ready(function () {
   });
     //маска для номера телефона
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+ // _________________________________!!!______________________________
+//Валидация формы "ЭКОНОМИЯ"_________________________________________________________ECONOMY
+$('.economy__form').validate({
+  errorClass: "invalid",
+  errorElement: "label",
+  rules: {
+    // строчное правило. simple rule, converted to {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required",
+    // правило-объект.  compound rule
+    userEmail: {
+      required: true,
+      email: true
+    }
+  }, //сообщения
+  messages: {
+    userName: {
+      required: "Имя обязательно",
+      minlength: "Имя не короче двух и не длиннее 15 букв",
+      maxlength: "Имя не короче двух и не длиннее 15 букв"
+    },
+    userPhone: "Телефон обязателен",
+    userEmail: {
+      required: "Обязательно укажите email",
+      email: "Введите email в формате name@domain.com"
+    }
+  } 
+});
+  //маска для номера телефона
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+//_____________________________________!!!____________________________
+                  //  форма в секции CONTROL
+                  $('.control__form').validate({
+                    errorClass: "invalid",
+                    errorElement: "label",
+                    rules: {
+                      // строчное правило. simple rule, converted to {required:true}
+                      userName: {
+                        required: true,
+                        minlength: 2,
+                        maxlength: 15
+                      },
+                      userPhone: "required",
+                      // правило-объект.  compound rule
+                      // userEmail: {
+                      //   required: false,
+                      //   email: false
+                      // }
+                    }, //сообщения
+                    messages: {
+                      userName: {
+                        required: "Имя обязательно",
+                        minlength: "Имя не короче двух и не длиннее 15 букв",
+                        maxlength: "Имя не короче двух и не длиннее 15 букв"
+                      },
+                      userPhone: "Телефон обязателен",
+                      // userEmail: {
+                      //   // required: "Обязательно укажите email",
+                      //   // email: "Введите email в формате name@domain.com"
+                      // }
+                    } 
+                  });
+                    //маска для номера телефона
+                    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
+                  // _______________________________________!!!____________________________________
+    //КАРТЫ ЯНДЕКСА
     ymaps.ready(function () {
       var myMap = new ymaps.Map('map', {
               center: [55.751574, 37.573856],
@@ -176,39 +341,6 @@ $(document).ready(function () {
           .add(myPlacemarkWithContent);
   });
 });
-
-// jQuery(function($) {
- 
-//   $('.swiper-object .swiper-container').each(function(index, value) {
- 
-//     var mySwiper = new Swiper(value, {
-//       autoplay: {
-//         delay: 5000,
-//       },
-      
-//       navigation: {
-//         // nextEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
-//         // nextEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
-//         // nextEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
-//         // twoEl: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
-//         threeEl: value.nextElementSibling.nextElementSibling.nextElementSibling,
-//         twoEl: value.nextElementSibling.nextElementSibling,
-//         oneEl: value.nextElementSibling,
-//       },
-//       pagination: {
-//         el: value.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling,
-//         clickable: true,
-//         renderBullet: function (index, className) {
-//           return '<span class="' + className + '">' + (index + 1) + '</span>';
-//         },
-//       },
-//       slidesPerView: 'auto',
-//     });
- 
-//   });
-// });
-
-
 
 // КНОПКА 
 // НАВЕРХ

@@ -350,6 +350,8 @@ template {
   font-size: 1.07rem; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
+  .label--dark {
+    color: #131313; }
 
 .input {
   background-color: transparent;
@@ -360,6 +362,8 @@ template {
   padding: 0.5rem 0; }
   .input--light::placeholder {
     color: #ffffff; }
+  .input--dark {
+    color: #131313; }
 
 .policy__checkbox {
   opacity: 0;
@@ -942,73 +946,21 @@ h3 {
   justify-content: center;
   align-items: center; }
 
-@keyframes slideRight {}from {
-  margin-left: 0; }
+@keyframes slideRight {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: 400px; } }
 
-to {
-  margin-left: 400px; }
-
-@keyframes loader {
-  0% {
-    transform: rotate(-45deg); }
-  50% {
-    transform: rotate(-135deg); }
-  100% {
-    transform: rotate(-225deg); } }
-
-@keyframes span-1 {
-  0% {
-    transform: translate(0);
-    border-radius: 20px; }
-  50% {
-    transform: translate(-50px, 0);
-    border-color: #EE4D68;
-    border-radius: 20px; }
-  100% {
-    transform: translate(0);
-    border-radius: 20px; } }
-
-@keyframes span-2 {
-  0% {
-    transform: translate(0);
-    border-radius: 20px; }
-  50% {
-    transform: translate(50px, 0);
-    border-color: #875678;
-    border-radius: 20px; }
-  100% {
-    transform: translate(0);
-    border-radius: 20px; } }
-
-@keyframes span-3 {
-  0% {
-    transform: translate(0);
-    border-radius: 20px; }
-  50% {
-    transform: translate(0, -50px);
-    border-color: #FF9900;
-    border-radius: 20px; }
-  100% {
-    transform: translate(0);
-    border-radius: 20px; } }
-
-@keyframes span-4 {
-  0% {
-    transform: translate(0);
-    border-radius: 20px; }
-  50% {
-    transform: translate(0, 50px);
-    border-color: #00E4F6;
-    border-radius: 20px; }
-  100% {
-    transform: translate(0);
-    border-radius: 20px; } }
-
-.loader {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  animation: loader 2s infinite ease-in-out; }
+.block {
+  font-family: 'Yeseva One', cursive;
+  color: #E3B873;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase; }
 
 .modal {
   opacity: 0;
@@ -1192,7 +1144,8 @@ to {
   width: 200px;
   height: 200px;
   z-index: 9999;
-  background-color: #E3B873;
+  margin: auto;
+  background: #b49c53;
   animation-name: slideRight;
   animation-duration: 3s; }
 
