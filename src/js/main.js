@@ -71,7 +71,6 @@ $(document).ready(function () {
       // sixEl: '.swiper-button-6',
     },
     
-
   });
   var prev = $('.swiper-button-prev');
   var next = $('.swiper-button-next');
@@ -87,6 +86,213 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullets.width() +10);
   bullets.css('left', prev.width() + 10);
 
+//Валидация формы MODAL FORM___________________________________________________________________MODAL
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "label",
+    rules: {
+      // строчное правило. simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правило-объект.  compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух и не длиннее 15 букв",
+        maxlength: "Имя не короче двух и не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите email в формате name@domain.com"
+      }
+    },
+     submitHandler: function(form) {
+      //  $(form).ajaxSubmit();
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        // dataType: "dataType",
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          alert('Перезвоним через 10 минут');
+          modal.toggleClass('modal--visible');
+        }
+      });
+      }
+  });
+    //маска для номера телефона
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+    // _________________________________!!!______________________________
+    //Валидация формы В ФУТЕРЕ_________________________________________________________FOOTER
+  // $('.footer__form').validate({
+  //   errorClass: "invalid",
+  //   errorElement: "label",
+  //   rules: {
+  //     // строчное правило. simple rule, converted to {required:true}
+  //     userName: {
+  //       required: true,
+  //       minlength: 2,
+  //       maxlength: 15
+  //     },
+  //     userPhone: "required",
+  //     // правило-объект.  compound rule
+  //     userEmail: {
+  //       required: true,
+  //       email: true
+  //     }
+  //   }, //сообщения
+  //   messages: {
+  //     userName: {
+  //       required: "Имя обязательно",
+  //       minlength: "Имя не короче двух и не длиннее 15 букв",
+  //       maxlength: "Имя не короче двух и не длиннее 15 букв"
+  //     },
+  //     userPhone: "Телефон обязателен",
+  //     userEmail: {
+  //       required: "Обязательно укажите email",
+  //       email: "Введите email в формате name@domain.com"
+  //     }
+  //   } 
+  // });
+  //   //маска для номера телефона
+  //   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+ // _________________________________!!!______________________________
+//Валидация формы "ЭКОНОМИЯ"_________________________________________________________ECONOMY
+// $('.economy__form').validate({
+//   errorClass: "invalid",
+//   errorElement: "label",
+//   rules: {
+//     // строчное правило. simple rule, converted to {required:true}
+//     userName: {
+//       required: true,
+//       minlength: 2,
+//       maxlength: 15
+//     },
+//     userPhone: "required",
+//     // правило-объект.  compound rule
+//     userEmail: {
+//       required: true,
+//       email: true
+//     }
+//   }, //сообщения
+//   messages: {
+//     userName: {
+//       required: "Имя обязательно",
+//       minlength: "Имя не короче двух и не длиннее 15 букв",
+//       maxlength: "Имя не короче двух и не длиннее 15 букв"
+//     },
+//     userPhone: "Телефон обязателен",
+//     userEmail: {
+//       required: "Обязательно укажите email",
+//       email: "Введите email в формате name@domain.com"
+//     }
+//   } 
+// });
+//   //маска для номера телефона
+//   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+//_____________________________________!!!____________________________
+                  //  форма в секции CONTROL
+                  // $('.control__form').validate({
+                  //   errorClass: "invalid",
+                  //   errorElement: "label",
+                  //   rules: {
+                  //     // строчное правило. simple rule, converted to {required:true}
+                  //     userName: {
+                  //       required: true,
+                  //       minlength: 2,
+                  //       maxlength: 15
+                  //     },
+                  //     userPhone: "required",
+                  //     // правило-объект.  compound rule
+                  //     // userEmail: {
+                  //     //   required: false,
+                  //     //   email: false
+                  //     // }
+                  //   }, //сообщения
+                  //   messages: {
+                  //     userName: {
+                  //       required: "Имя обязательно",
+                  //       minlength: "Имя не короче двух и не длиннее 15 букв",
+                  //       maxlength: "Имя не короче двух и не длиннее 15 букв"
+                  //     },
+                  //     userPhone: "Телефон обязателен",
+                  //     // userEmail: {
+                  //     //   // required: "Обязательно укажите email",
+                  //     //   // email: "Введите email в формате name@domain.com"
+                  //     // }
+                  //   } 
+                  // });
+                  //   //маска для номера телефона
+                  //   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+                  // _______________________________________!!!____________________________________
+    //КАРТЫ ЯНДЕКСА
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [55.751574, 37.573856],
+              zoom: 9
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+  
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+  
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Наш офис',
+              balloonContent: 'Вход со двора'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/marker.png',
+              // Размеры метки.
+              iconImageSize: [32, 32],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-5, -38]
+          }),
+  
+          myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+              hintContent: 'Собственный значок метки с контентом',
+              balloonContent: 'А эта — новогодняя',
+              iconContent: '12'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#imageWithContent',
+              // Своё изображение иконки метки.
+              iconImageHref: 'images/ball.png',
+              // Размеры метки.
+              iconImageSize: [48, 48],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-24, -24],
+              // Смещение слоя с содержимым относительно слоя с картинкой.
+              iconContentOffset: [15, 15],
+              // Макет содержимого.
+              iconContentLayout: MyIconContentLayout
+          });
+  
+      myMap.geoObjects
+          .add(myPlacemark)
+          .add(myPlacemarkWithContent);
+  });
 });
 
 // jQuery(function($) {
