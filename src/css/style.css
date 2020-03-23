@@ -385,10 +385,15 @@ template {
   .policy__label--center {
     justify-content: center; }
 
-.invalid {
+div.invalid {
   color: #cc2f2a; }
 
-input.invalid {
+input.invalid + .input--dark {
+  color: #ffffff;
+  border-bottom: 1px solid #cc2f2a; }
+
+input.invalid + .input--light {
+  color: #131313;
   border-bottom: 1px solid #cc2f2a; }
 
 .invalid {

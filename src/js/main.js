@@ -138,7 +138,7 @@ $(document).ready(function () {
 //Валидация формы MODAL FORM___________________________________________________________________MODAL
   $('.modal__form').validate({
     errorClass: "invalid",
-    errorElement: "label",
+    errorElement: "div",
     rules: {
       // строчное правило. simple rule, converted to {required:true}
       userName: {
@@ -233,7 +233,7 @@ $(document).ready(function () {
 //Валидация формы "ЭКОНОМИЯ"_________________________________________________________ECONOMY
 $('.economy__form').validate({
   errorClass: "invalid",
-  errorElement: "label",
+  errorElement: "div",
   rules: {
     // строчное правило. simple rule, converted to {required:true}
     userName: {
@@ -273,7 +273,7 @@ $('.economy__form').validate({
                   //  форма в секции CONTROL
                   $('.control__form').validate({
                     errorClass: "invalid",
-                    errorElement: "label",
+                    errorElement: "div",
                     rules: {
                       // строчное правило. simple rule, converted to {required:true}
                       userName: {

@@ -71,10 +71,15 @@
 //     left: 0
 //     top: 0      
 
-.invalid
+div
+  &.invalid
     color: $tomato
 input
-  &.invalid
+  &.invalid + .input--dark
+    color: $light
+    border-bottom: 1px solid $tomato
+  &.invalid + .input--light
+    color: $dark
     border-bottom: 1px solid $tomato
 .invalid
   font-weight: 600
