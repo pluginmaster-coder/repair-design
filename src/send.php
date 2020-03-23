@@ -18,7 +18,7 @@ try {
     $mail->CharSet = "utf-8";
     $mail->SMTPDebug = 2;                     // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.gmail.ru';                    // Set the SMTP server to send through
+    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'evgeniy.glo.php@gmail.com';                     // SMTP username
     $mail->Password   = '18Abrakadabra';                               // SMTP password
