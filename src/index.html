@@ -71,31 +71,6 @@
       <!-- container -->
       <a href="#" class="hero__scroll-down  animated bounce delay-3s">Листайте вниз</a>
    </section>
-   <!-- /.hero -->
-   <!-- <div class="container">
-      <div class="box post">
-      <p class="import">
-         вставляем импорт
-      </p>
-      </div>
-   </div> -->
-     
-         <!-- _________________ИМПОРТ__________________ -->
-   <!-- <script>
-      var doc = document.querySelector('link[rel="import"]').import;
-      // Grab DOM from doc.html's document.
-      var text = doc.querySelector('.intro-dm');
-      document.body.appendChild(text.cloneNode(true));
-      </script> -->
-   <!-- _________________ИМПОРТ__________________ -->
-      <!-- <div class="box__kar"></div>
-         <div class="loader">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-         </div>
-      </div> -->
    </div>
 <!-- ___________________________________________Слайд Секция -->
    <section class="section section--dark projects">
@@ -233,55 +208,7 @@
          <div class="control__video video">
             <img src="img/play-icon.svg" alt="" class="video__play">
          </div>
-         <!-- control__video video -->
-         <!-- <p class="control__text wow swing delay-1s">
-            На каждом объекте установлена ​​камера, которая транслирует 
-            ход работы на часах. В любой момент вы можете зайти на наш сайт
-            и следить за ходом работы в вашей квартире. Посмотрите прямую
-            трансляцию с одного из наших объектов! Оставьте заявку ниже
-            чтобы получить ссылку на трансляцию.
-         </p>
-         <div class="block"><p>Появление прямоугольников при скролле</p></div>
-         <div class="block"><p>Появление прямоугольников при скролле</p></div>
-         <div class="block"><p>Появление прямоугольников при скролле</p></div>
-         
-         <div class="active">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-         </div>
-         
-         <div class="block"><p>Появление прямоугольников при скролле</p></div>
-         <div class="block"><p>Появление прямоугольников при скролле</p></div>
-         <div class="block"><p>Появление прямоугольников при скролле</p></div>
-       
-         <style type="text/css">
-.block {
-	margin-bottom: 15px;
-	background-image: linear-gradient(135deg, #ececec, #bfbbbb);
-	padding: 100px 0;
-	font-size: 44px;
-	color: #555;
-	text-align: center;
-}
-.active {
-	margin: 0 -1% 15px;
-	overflow: hidden;
-}
-.active div {
-	display: none;   
-	float: left;    
-	width: 23%;    
-	margin: 1%;    
-	padding: 40px 0;    
-	background-image: linear-gradient(135deg, #ffaede, #ff9797);
-	font-size: 60px;    
-	color: #fff;
-	text-align: center; 
-}
-</style> -->
-         <form action="sand.php" method="POST" class="form control__form">
+         <form action="send.php" method="POST" class="form control__form">
             <div class="control__input-group">
                <label for="user-name" class="label form__label control__label ">Имя</label>
                <input type="text" name="userName" class="input form__input control__input input--dark" id="control-user-name" placeholder="Как вас зовут:">
@@ -452,7 +379,7 @@
                      <h3 class="modal__title">
                         Оставьте заявку на бесплатный<br>выезд замерщика
                      </h3>
-                     <form action="sand.php" method="POST" class="form action__form">
+                     <form action="send.php" method="POST" class="form action__form">
                         <div class="input-group modal__input-group">
                            <label for="user-name" class="label form__label label--light">Имя</label>
                         <input type="text" name="userName" class="input form__input modal__input input--light" id="action-user-name" placeholder="Как вас зовут:">
@@ -475,7 +402,6 @@
                   </div>
                   <!-- /.modal__dialog -->
                </div>
-         
                   <div class="action__economy">
                      <div class="action__economy__image">
                            <img src="img/pig-icon.svg" alt="pig" class="footer__icons__link--mail">
@@ -950,7 +876,7 @@
       <div class="footer__wrap">
          <h3 class="footer__title">Остались вопросы?</h3>
          <!-- /.footer__title -->
-         <form action="sand.php" method="POST" class="form footer__form">
+         <form action="send.php" method="POST" class="form footer__form">
             <div class="input-group footer__input-group">
                <label for="user-name" class="label form__label label--light">Имя</label>
                <input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:">
@@ -1032,7 +958,7 @@
       <h3 class="modal__title">
          Оставьте заявку и наш менеджер<br>свяжется с вами
       </h3>
-      <form action="sand.php" method="POST" class="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
          <div class="input-group modal__input-group">
             <label for="user-name" class="label form__label label--light">Имя</label>
          <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">

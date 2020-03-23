@@ -42,36 +42,36 @@
 //   };
 // });
 // ________АНИМАЦИЯ JQUERY____
-var block_show = false;
+// var block_show = false;
 
-function scrollTracking(){
-	if (block_show) {
-		return false;
-	}
+// function scrollTracking(){
+// 	if (block_show) {
+// 		return false;
+// 	}
 
-	var wt = $(window).scrollTop();
-	var wh = $(window).height();
-	var et = $('.active').offset().top;
-	var eh = $('.active').outerHeight();
-	var dh = $(document).height();   
+// 	var wt = $(window).scrollTop();
+// 	var wh = $(window).height();
+// 	var et = $('.active').offset().top;
+// 	var eh = $('.active').outerHeight();
+// 	var dh = $(document).height();   
  
-	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
-		block_show = true;
+// 	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+// 		block_show = true;
 		
-		// Код анимации
-		$('.active div:eq(0)').show('fast', function(){
-			$(this).next().show('fast', arguments.callee);
-		});
-	}
-}
+// 		// Код анимации
+// 		$('.active div:eq(0)').show('fast', function(){
+// 			$(this).next().show('fast', arguments.callee);
+// 		});
+// 	}
+// }
 
-$(window).scroll(function(){
-	scrollTracking();
-});
+// $(window).scroll(function(){
+// 	scrollTracking();
+// });
 	
-$(document).ready(function(){ 
-	scrollTracking();
-});
+// $(document).ready(function(){ 
+// 	scrollTracking();
+// });
 // _______________________!!!___________________анимация jquery
 
 // МОДАЛЬНОЕ ОКНО НА JQUERY
@@ -172,7 +172,6 @@ $(document).ready(function () {
       }
     },
      submitHandler: function(form) {
-      //  $(form).ajaxSubmit();
       $.ajax({
         type: "POST",
         url: "send.php",
