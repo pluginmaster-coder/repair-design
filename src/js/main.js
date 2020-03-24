@@ -73,12 +73,44 @@
 // 	scrollTracking();
 // });
 // _______________________!!!___________________анимация jquery
+     // МОДАЛЬНОЕ ОКНО НА JQUERY 
+                // СПАСИБО ЗА ЗАЯВКУ 
+                // $(document).ready(function () {
+                //   var modalths = $('.modalths'),
+                //       modalBtnThs = $('[data-toggle="modalths"]'),
+                //       closeBtnThs = $('.modalths__close');
+                
+                //   modalBtnThs.on('click', function(){
+                //     modalths.toggleClass('modalths--visible');
+                //   });
+                //   closeBtnThs.on('click', function(){
+                //     modalths.toggleClass('modalths--visible');
+                //   });        
+                    // Закрытие по клавише Esc.
+                  // $(document).keydown(function(e) {
+                  //   if (e.keyCode === 27) {
+                  //     e.stopPropagation();
+                  //     $('.modalths').toggleClass('modalths--visible');
+                  //   }
+                  // });             
+                  // Клик по фону, но не по окну.
+                //   $('.modalths').click(function(e) {
+                //     if ($(e.target).closest('.modalths__dialog').length == 0) {
+                //       $(this).toggleClass('modalths--visible');			
+                //     }
+                //   });
+                // });
+                // _______________________!!!___________________
+// МОДАЛЬНОЕ ОКНО НА JQUERY 
 
-// МОДАЛЬНОЕ ОКНО НА JQUERY
+// ОСТАВЬТЕ ЗАЯВКУ 
 $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle="modal"]'),
       closeBtn = $('.modal__close');
+  var modalths = $('.modalths'),
+      modalBtnThs = $('[data-toggle="modalths"]'),
+      closeBtnThs = $('.modalths__close');
 
   modalBtn.on('click', function(){
     modal.toggleClass('modal--visible');
@@ -86,21 +118,43 @@ $(document).ready(function () {
   closeBtn.on('click', function(){
     modal.toggleClass('modal--visible');
   });
+  modalBtnThs.on('click', function(){
+    modalths.toggleClass('modalths--visible');
+  });
+  closeBtnThs.on('click', function(){
+    modalths.toggleClass('modalths--visible');
+  });        
 
   	// Закрытие по клавише Esc.
-	$(document).keydown(function(e) {
-		if (e.keyCode === 27) {
-			e.stopPropagation();
-			$('.modal').toggleClass('modal--visible');
-		}
-	});
+	// $(document).keydown(function(e) {
+	// 	if (e.keyCode === 27) {
+	// 		e.stopPropagation();
+	// 		$('.modal').toggleClass('modal--visible');
+	// 	}
+  // });
+    	// Закрытие по клавише Esc.
+	// $(document).keydown(function(e) {
+	// 	if (e.keyCode === 27) {
+	// 		e.stopPropagation();
+	// 		$('.modalths').toggleClass('modalths--visible');
+	// 	}
+	// });
 	
 	// Клик по фону, но не по окну.
 	$('.modal').click(function(e) {
 		if ($(e.target).closest('.modal__dialog').length == 0) {
 			$(this).toggleClass('modal--visible');			
 		}
-	});
+  });
+  	// Клик по фону, но не по окну.
+	$('.modalths').click(function(e) {
+		if ($(e.target).closest('.modalths__dialog').length == 0) {
+			$(this).toggleClass('modalths--visible');			
+		}
+  });
+  
+  // _______________________!!!___________________
+
   // СЛАЙДЕР НА JQUERY
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -182,15 +236,16 @@ $(document).ready(function () {
         type: "POST",
         url: "send.php",
         data: $(form).serialize(),
-        // dataType: "dataType",
         success: function (response) {
           console.log('Ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
-          alert('Перезвоним через 10 минут');
-          modal.toggleClass('modal--visible');
+          // alert('Перезвоним через 10 минут');
+          modal.removeClass('modal--visible');
+          modalths.toggleClass('modalths--visible');
         }
       });
       }
+      
   });
     //маска для номера телефона
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
@@ -381,6 +436,35 @@ $(document).ready(function () {
           .add(myPlacemarkWithContent);
   });
 });
+
+                // МОДАЛЬНОЕ ОКНО НА JQUERY 
+                // СПАСИБО ЗА ЗАЯВКУ 
+                // $(document).ready(function () {
+                //   var modalths = $('.modalths'),
+                //       modalBtnThs = $('[data-toggle="modalths"]'),
+                //       closeBtnThs = $('.modalths__close');
+                
+                //   modalBtnThs.on('click', function(){
+                //     modalths.toggleClass('modalths--visible');
+                //   });
+                //   closeBtnThs.on('click', function(){
+                //     modalths.toggleClass('modalths--visible');
+                //   });        
+                    // Закрытие по клавише Esc.
+                  // $(document).keydown(function(e) {
+                  //   if (e.keyCode === 27) {
+                  //     e.stopPropagation();
+                  //     $('.modalths').toggleClass('modalths--visible');
+                  //   }
+                  // });             
+                  // Клик по фону, но не по окну.
+                //   $('.modalths').click(function(e) {
+                //     if ($(e.target).closest('.modalths__dialog').length == 0) {
+                //       $(this).toggleClass('modalths--visible');			
+                //     }
+                //   });
+                // });
+                // _______________________!!!___________________
 
 // КНОПКА 
 // НАВЕРХ

@@ -67,7 +67,6 @@
             </div>
          </div>
          <!-- .hero__content -->
-      </!-->
       <!-- container -->
       <a href="#" class="hero__scroll-down  animated bounce delay-3s">Листайте вниз</a>
    </section>
@@ -950,7 +949,7 @@
 <!-- /.footer__menu -->
 </footer>
 <!-- /.footer section--dark -->
-   <!-- ___________________МОДАЛЬНОЕ ОКНО________________ -->
+   <!-- ___________________МОДАЛЬНОЕ ОКНО - ОТПРАВИТЬ ЗАЯВКУ________________ -->
 </div>
 <div class="modal" id="modalid">
    <div class="modal__dialog">
@@ -976,13 +975,32 @@
             <label for="modal-policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
          </div>
          <!-- policy -->
-         <button class="button button--primary modal__button">Отправить заявку</button>
+         <button class="button button--primary modal__button" data-toggle='modalths'>Отправить заявку</button>
       </form>
       <!-- /.form modal__form -->
    </div>
    <!-- /.modal__dialog -->
 </div>
+<!-- ___________________!!!________________ -->
 
+   <!-- ___________________МОДАЛЬНОЕ ОКНО - СПАСИБО За ЗАЯВКУ________________ -->
+</div>
+<div class="modalths" id="modalths">
+   <div class="modalths__dialog">
+      <button class="modalths__close"></button>
+      <h3 class="modalths__title">
+        Спасибо!<br>Ваша заявка отправлена.
+      </h3>
+      <!-- <div class="modal__title__image">
+         <img src="img/otdelka.jpg" alt="otdelka">
+      </div> -->
+         <button class="button button--primary modalths__button"><span class="button__text--outline" data-toggle='modalths'>Спасибо за заявку</span></button>
+      </form>
+      <!-- /.form modal__form -->
+   </div>
+   <!-- /.modal__dialog -->
+</div>
+<!-- ___________________!!!________________ -->
 <button style="position: absolute; top: 456px; right: 0px; display:none;" class="buttonup"></button>
 <!-- /.modal -->
 <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
