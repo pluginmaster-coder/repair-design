@@ -101,7 +101,7 @@ $(document).ready(function () {
 			$(this).toggleClass('modal--visible');			
 		}
 	});
-// СЛАЙДЕР НА JQUERY
+  // СЛАЙДЕР НА JQUERY
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
     pagination: {
@@ -135,7 +135,7 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullets.width() +10);
   bullets.css('left', prev.width() + 10);
 
-//Валидация формы MODAL FORM___________________________________________________________________MODAL
+  //Валидация формы MODAL FORM___________________________________________________________________MODAL
   $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -149,11 +149,14 @@ $(document).ready(function () {
       userPhone: {
         required: true,
       minlength: 10 + 7
-    },
+      },
       // правило-объект.  compound rule
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox: {
+        required: true,
       }
     }, //сообщения
     messages: {
@@ -169,6 +172,9 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите email в формате name@domain.com"
+      },
+      policyCheckbox: {
+        required: "Примите соглашение об обработке персональных данных",    
       }
     },
      submitHandler: function(form) {
@@ -208,6 +214,9 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox: {
+        required: true,
       }
     }, //сообщения
     messages: {
@@ -223,14 +232,17 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите email в формате name@domain.com"
+      },
+      policyCheckbox: {
+        required: "Примите соглашение об обработке персональных данных",    
       }
     }
   });
     //маска для номера телефона
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
  // _________________________________!!!______________________________
-//Валидация формы "ЭКОНОМИЯ"_________________________________________________________ECONOMY
-$('.action__form').validate({
+  //Валидация формы "ЭКОНОМИЯ"_________________________________________________________ECONOMY
+  $('.action__form').validate({
   errorClass: "invalid",
   errorElement: "div",
   rules: {
@@ -248,6 +260,9 @@ $('.action__form').validate({
     userEmail: {
       required: true,
       email: true
+    },
+    policyCheckbox: {
+      required: true,
     }
   }, //сообщения
   messages: {
@@ -263,12 +278,15 @@ $('.action__form').validate({
     userEmail: {
       required: "Заполните поле",
       email: "Введите email в формате name@domain.com"
+    },
+    policyCheckbox: {
+      required: "Примите соглашение об обработке персональных данных",    
     }
   } 
-});
+  });
   //маска для номера телефона
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
-//_____________________________________!!!____________________________
+  //_____________________________________!!!____________________________
                   //  форма в секции CONTROL
                   $('.control__form').validate({
                     errorClass: "invalid",
@@ -283,7 +301,10 @@ $('.action__form').validate({
                       userPhone: {
                         required: true,
                       minlength: 10 + 7
-                      }
+                    },
+                    policyCheckbox: {
+                      required: true,
+                    }
                     },
                     messages: {
                       userName: {
@@ -294,6 +315,9 @@ $('.action__form').validate({
                       userPhone: { 
                         required: "Заполните поле",
                         minlength: "Полностью введите номер телефона",
+                      },
+                      policyCheckbox: {
+                        required: "Примите соглашение об обработке персональных данных",    
                       }
                     }
                   });

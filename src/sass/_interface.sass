@@ -4,7 +4,6 @@
   border-radius: 2px
   text-transform: uppercase
   font-size: 0.93rem
-  // border: 1px solid red
   &:hover
     cursor: pointer
     background-color: $primary_btn
@@ -26,7 +25,6 @@
     color: $light
   &__text--primary
     margin-right: 2rem
-  // &__text--outline
 .label
   font-size: 1.07rem
   &--light
@@ -47,9 +45,9 @@
     color: $dark
 .policy
   &__checkbox
-    opacity: 0 
+    opacity: 0
     visibility: hidden
-    &:checked + .policy__label
+    &:checked ~ .policy__label
       &::before
         background: $primary url('../img/check.svg') no-repeat center / 0.8rem
   &__label
@@ -65,11 +63,6 @@
       margin-right: 0.64rem
     &--center
       justify-content: center
-// em
-//   &.invalid
-//     position: absolute
-//     left: 0
-//     top: 0      
 
 div
   &.invalid
@@ -83,15 +76,7 @@ input
     border-bottom: 1px solid $tomato
 .invalid
   font-weight: 600
-//  !!!!!!!!!!!!!КРИК СИСТЕМЫ ОБ ОШИБКАХ!!!!!!!!
-      // &::after
-    //   content: 'bug: не видно новый checkbox'
-    //   width: 90px
-    //   height: 2px
-    //   background-color: $primary
-    //   color: red
-    //   margin-left: 2rem
-      // border: 1px solid
+
 .buttonup
   background: $primary url(../img/up.svg) no-repeat center / cover
   width: 50px
@@ -100,33 +85,11 @@ input
   padding: 15px
   margin: 20px
   margin-top: 48rem
-  // display: inline-block
-  // background-color: $primary
-  // // background-color: red
-  // width: 50px
-  // height: 50px
-  // text-align: center
   border-radius: 5px
-  // margin: 30px
-  // position: fixed
-  // bottom: 30px
-  // right: 10px
   transition: background-color .3s
-  // z-index: 1000
   &:hover 
     cursor: pointer
-  //   background-color: #080808
-  // &:active 
-  //   background-color: #555
   &::after 
-    // content: "\f077"
-    // margin-bottom: 1px
-    // font-family: FontAwesome
-    // font-weight: normal
-    // font-style: normal
-    // font-size: 1.5em
-    // line-height: 50px
-    // color: #fff
 
 
 

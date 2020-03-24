@@ -368,7 +368,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
+  .policy__checkbox:checked ~ .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -969,14 +969,14 @@ h3 {
     margin: auto; }
   .footer__input {
     padding-top: 0.3rem; }
-  .footer__input-group {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 45%;
-    margin-bottom: 3.2rem; }
-    .footer__input-group--full-width {
-      flex-basis: 100%;
-      margin-bottom: 2rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
   .footer__policy {
     flex-basis: 100%;
     margin-bottom: 3.6rem; }
