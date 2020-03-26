@@ -11,6 +11,12 @@
       // font-size: 20px
       // line-height: 27px
       // text-align: center
+    &--text-team
+      margin-bottom: 5rem
+  &--team
+    margin-bottom: 30rem
+  &--repair
+    margin-bottom: 30rem
 .background
   &__design
     width: 100%
@@ -20,6 +26,16 @@
     // border: 2px solid red
 .card
   // border: 1px solid #eb1313
+  &__revers
+    display: flex
+    // flex-direction: column
+  &__icon
+    margin-top: -34rem
+    margin-left: -4rem
+    // z-index: 
+  &__image
+    // margin-top: -2rem
+    // z-index: 
   &__text
     position: relative
     max-width: 23.6rem
@@ -28,6 +44,16 @@
     padding: 1.79rem 2.14rem
     background-color: #fff
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+    // border: 1px solid #eb1111
+    &--team
+      position: relative
+      max-width: 16.6428rem
+      margin: 0 auto
+      margin-top: -5.3rem
+      padding: 1.79rem 2.14rem
+      background-color: #fff
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+      // border: 1px solid #eb1111
   &__title
     font-family: 'Yeseva One', cursive
     font-size: 1.29rem
@@ -38,7 +64,9 @@
       padding: 0
       margin-bottom: -2rem
       padding-bottom: 0.7rem
-      font-family: 'Yeseva One', cursive   
+      font-family: 'Yeseva One', cursive 
+    &--team
+      text-align: center 
   &__list
     padding: 0 0 0 0.3rem
     margin: 0
@@ -61,6 +89,23 @@
     &--design
       width: 16.3rem
       height: 3.857rem
+    &--team
+      position: absolute
+      text-align: center
+      left: 0
+      bottom: -0.1rem
+      text-transform: uppercase
+      background-color: $primary
+      color: $light
+      padding: 1.214rem 3.16rem
+      font-family: 'Yeseva One', cursive 
+      font-style: normal
+      font-weight: normal
+      font-size: 13px
+      line-height: 20px
+  &__item
+    &--team
+      text-align: center
 // .text_in_card
   // border: 1px solid red
   //margin-bottom: 0rem

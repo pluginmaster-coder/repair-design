@@ -2,7 +2,7 @@ const {src, dest, watch, } = require('gulp');
 const browserSync = require('browser-sync').create();
 const sourcemaps = require ('gulp-sourcemaps');
 const sass = require('gulp-sass');
-
+const cleanCSS = require('gulp-clean-css');
 // gulp.task('hello', function(done){
 // console.log('Привет мир!');
 // done();
@@ -22,17 +22,23 @@ function bs() {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function serveSass() {
     return src("./sass/**/*.sass", "./sass/**/*.scss")
-  //   .pipe (sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-  //   .pipe (sourcemaps.write(./))
     .pipe(dest("./css"))
     .pipe(browserSync.stream());
 };
 
+function buildCSS(done) {
+  src('css/**/**.css')
+  .pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(dest('/dist/css/'));
+  done();
+}
+
 exports.bs = bs;
+exports.buildCSS = buildCSS; 
 // exports.serveSass = serveSass;
 
-       
+
 
 
       

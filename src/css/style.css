@@ -366,7 +366,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
+  .policy__checkbox:checked ~ .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -383,14 +383,16 @@ template {
   .policy__label--center {
     justify-content: center; }
 
-label.invalid {
+div.invalid {
   color: #cc2f2a; }
 
-input.invalid {
+input.invalid + .input--dark {
+  color: #ffffff;
   border-bottom: 1px solid #cc2f2a; }
 
-.invalid {
-  font-weight: 600; }
+input.invalid + .input--light {
+  color: #131313;
+  border-bottom: 1px solid #cc2f2a; }
 
 .buttonup {
   background: #E3B873 url(../img/up.svg) no-repeat center/cover;
@@ -482,6 +484,13 @@ img {
 
 .padding {
   padding-bottom: 20rem; }
+
+.ymaps-layers-pane {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1); }
 
 .projects {
   padding-bottom: 30rem; }
@@ -753,18 +762,17 @@ img {
   display: flex;
   margin: auto;
   margin-bottom: 4.028rem;
-  max-width: 58.357rem;
-  min-height: 31rem;
-  background: #131313 url("../img/video-mask.jpg") no-repeat center;
-  box-shadow: 0px 20px 50px rgba(255, 255, 255, 0.1);
-  animation-name: slideRight;
-  animation-duration: 1s; }
-  .control__video::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); }
+  max-width: 58.357rem; }
+  .control__video__movie {
+    min-height: 31rem;
+    background: #131313 url("../img/video-mask.jpg") no-repeat center;
+    box-shadow: 0px 20px 50px rgba(255, 255, 255, 0.1); }
+    .control__video__movie::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); }
 
 .control__text {
   max-width: 40.785rem;
@@ -786,8 +794,6 @@ img {
 .control__form {
   display: flex;
   justify-content: space-between;
-  margin-right: 20%;
-  margin-left: 19.5%;
   flex-wrap: wrap;
   min-width: 55rem; }
 
@@ -814,12 +820,27 @@ img {
     margin-bottom: 4rem; }
   .types__section-title--text {
     margin-top: 2rem; }
+  .types__section-title--text-team {
+    margin-bottom: 5rem; }
+
+.types--team {
+  margin-bottom: 30rem; }
+
+.types--repair {
+  margin-bottom: 30rem; }
 
 .background__design {
   width: 100%;
   height: 50rem;
   margin-top: -35.7rem;
   background-color: #131313; }
+
+.card__revers {
+  display: flex; }
+
+.card__icon {
+  margin-top: -34rem;
+  margin-left: -4rem; }
 
 .card__text {
   position: relative;
@@ -829,6 +850,14 @@ img {
   padding: 1.79rem 2.14rem;
   background-color: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .card__text--team {
+    position: relative;
+    max-width: 16.6428rem;
+    margin: 0 auto;
+    margin-top: -5.3rem;
+    padding: 1.79rem 2.14rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
 
 .card__title {
   font-family: 'Yeseva One', cursive;
@@ -841,6 +870,8 @@ img {
     margin-bottom: -2rem;
     padding-bottom: 0.7rem;
     font-family: 'Yeseva One', cursive; }
+  .card__title--team {
+    text-align: center; }
 
 .card__list {
   padding: 0 0 0 0.3rem;
@@ -865,10 +896,52 @@ img {
   .card__pricetag--design {
     width: 16.3rem;
     height: 3.857rem; }
+  .card__pricetag--team {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: -0.1rem;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #ffffff;
+    padding: 1.214rem 3.16rem;
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px; }
+
+.card__item--team {
+  text-align: center; }
 
 h3 {
   margin-block-start: 0;
   padding-bottom: 10px; }
+
+.action {
+  padding-top: 3rem;
+  border: 1px solid #e40606; }
+  .action__selection {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e40606; }
+  .action__wrap {
+    background: #131313 url("../img/action.jpg") no-repeat center/cover;
+    margin: 0;
+    padding: 25.5rem;
+    border: 2px solid #E3B873; }
+  .action__form {
+    margin: 0; }
+  .action__economy {
+    display: flex;
+    margin-top: 2rem; }
+    .action__economy__text {
+      margin-top: 2.7rem;
+      color: #E3B873; }
+
+.center {
+  min-height: 100vh;
+  border: 2px solid #131313; }
 
 .design {
   padding-bottom: 19.8rem; }
@@ -1143,6 +1216,67 @@ to {
   .modal__button {
     align-self: flex-end; }
 
+.modalths {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modalths--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modalths__dialog {
+    position: relative;
+    min-width: 36.36rem;
+    background: #131313 url(../img/bg-lines.svg) no-repeat center;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #ffffff; }
+  .modalths__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modalths__title {
+    font-family: 'Yeseva One,' cursive;
+    font-size: 1.357rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.428rem; }
+  .modalths__form {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff; }
+  .modalths__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.428rem; }
+  .modalths__input:last-of-type {
+    margin-bottom: 1rem; }
+  .modalths__policy {
+    margin-bottom: 2.7rem; }
+  .modalths__button {
+    align-self: flex-end;
+    margin-top: 1rem; }
+  .modalths__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
 @media screen and (min-width: 1920px) {
   .logo {
     margin-left: -245px; } }
@@ -1265,18 +1399,3 @@ to {
     font-size: 16px; }
   .header {
     min-height: 85px !important; } }
-
-.box {
-  width: 200px;
-  height: 200px;
-  z-index: 9999;
-  background-color: #E3B873;
-  animation-name: slideRight;
-  animation-duration: 3s; }
-
-.ymaps-layers-pane {
-  filter: grayscale(1);
-  -ms-filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-  -moz-filter: grayscale(1);
-  -o-filter: grayscale(1); }
