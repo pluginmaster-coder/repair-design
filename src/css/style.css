@@ -350,6 +350,8 @@ template {
   font-size: 1.07rem; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
+  .label--dark {
+    color: #131313; }
 
 .input {
   background-color: transparent;
@@ -393,6 +395,12 @@ input.invalid + .input--dark {
 input.invalid + .input--light {
   color: #131313;
   border-bottom: 1px solid #cc2f2a; }
+<<<<<<< HEAD
+=======
+
+.invalid {
+  font-weight: 600; }
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
 
 .buttonup {
   background: #E3B873 url(../img/up.svg) no-repeat center/cover;
@@ -762,6 +770,7 @@ img {
   display: flex;
   margin: auto;
   margin-bottom: 4.028rem;
+<<<<<<< HEAD
   max-width: 58.357rem; }
   .control__video__movie {
     min-height: 31rem;
@@ -789,6 +798,58 @@ img {
       height: 2px;
       background-color: #E3B873;
       border-radius: 30px; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem;
+  margin-left: 15.2rem; }
+=======
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") no-repeat center;
+  box-shadow: 0px 20px 50px rgba(255, 255, 255, 0.1);
+  animation-name: slideRight;
+  animation-duration: 1s; }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  max-width: 40.785rem;
+  margin: auto;
+  margin-bottom: 4.485rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.4rem; }
+  .control__text::before {
+    content: '';
+    margin: auto;
+    display: block;
+    margin-bottom: 2.5rem;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px; }
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20%;
+  margin-left: 19.5%;
+  flex-wrap: wrap;
+  min-width: 55rem; }
 
 .control__input-group {
   display: flex;
@@ -912,6 +973,7 @@ h3 {
   padding-bottom: 10px; }
 
 .action {
+<<<<<<< HEAD
   padding-top: 3rem;
   border: 1px solid #e40606; }
   .action__selection {
@@ -936,6 +998,29 @@ h3 {
   min-height: 100vh;
   border: 2px solid #131313; }
 
+=======
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .action__selection {
+    display: flex;
+    justify-content: space-between; }
+  .action__wrap {
+    max-width: 73.07rem;
+    margin: auto;
+    padding: 25.5rem;
+    border: 2px solid #E3B873;
+    background: #131313 url("../img/action.jpg") no-repeat center/cover; }
+  .action__economy {
+    display: flex;
+    margin-top: 2rem; }
+    .action__economy__image {
+      border: 1px solid #e40606; }
+    .action__economy__text {
+      margin-top: 2.7rem;
+      border: 1px solid #e40606;
+      color: #E3B873; }
+
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
 .design {
   padding-bottom: 19.8rem; }
   .design__section-title {
@@ -967,6 +1052,7 @@ h3 {
     margin: auto; }
   .footer__input {
     padding-top: 0.3rem; }
+<<<<<<< HEAD
   .footer__input-group {
     display: flex;
     flex-direction: column;
@@ -975,6 +1061,16 @@ h3 {
     .footer__input-group--full-width {
       flex-basis: 100%;
       margin-bottom: 2rem; }
+=======
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
   .footer__policy {
     flex-basis: 100%;
     margin-bottom: 3.6rem; }
@@ -1013,6 +1109,7 @@ h3 {
   justify-content: center;
   align-items: center; }
 
+<<<<<<< HEAD
 .economy {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem;
@@ -1154,6 +1251,8 @@ to {
   position: relative;
   animation: loader 2s infinite ease-in-out; }
 
+=======
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -1396,3 +1495,10 @@ to {
     font-size: 16px; }
   .header {
     min-height: 85px !important; } }
+
+.ymaps-layers-pane {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1); }

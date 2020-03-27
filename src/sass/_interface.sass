@@ -4,7 +4,6 @@
   border-radius: 2px
   text-transform: uppercase
   font-size: 0.93rem
-  // border: 1px solid red
   &:hover
     cursor: pointer
     background-color: $primary_btn
@@ -26,11 +25,12 @@
     color: $light
   &__text--primary
     margin-right: 2rem
-  // &__text--outline
 .label
   font-size: 1.07rem
   &--light
-    color: rgba($light ,0.5)    
+    color: rgba($light ,0.5)
+  &--dark
+    color: $dark
 .input
   background-color: transparent
   border: none
@@ -42,11 +42,15 @@
     &::placeholder
       color: $light
   &--dark
+<<<<<<< HEAD
     color: $dark    
 
+=======
+    color: $dark
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
 .policy
   &__checkbox
-    opacity: 0 
+    opacity: 0
     visibility: hidden
     &:checked ~ .policy__label
       &::before
@@ -64,6 +68,7 @@
       margin-right: 0.64rem
     &--center
       justify-content: center
+<<<<<<< HEAD
  
 // label
 //   &.invalid
@@ -74,6 +79,9 @@
 // .invalid
 //   font-weight: 600
 //  !!!!!!!!!!!!!КРИК СИСТЕМЫ ОБ ОШИБКАХ!!!!!!!!
+=======
+
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
 div
   &.invalid
     color: $tomato
@@ -84,6 +92,7 @@ input
   &.invalid + .input--light
     color: $dark
     border-bottom: 1px solid $tomato
+<<<<<<< HEAD
 // .invalid
 //   font-weight: 600
       // &::after
@@ -94,6 +103,11 @@ input
     //   color: red
     //   margin-left: 2rem
       // border: 1px solid
+=======
+.invalid
+  font-weight: 600
+
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
 .buttonup
   background: $primary url(../img/up.svg) no-repeat center / cover
   width: 50px
@@ -106,7 +120,11 @@ input
   transition: background-color .3s
   &:hover 
     cursor: pointer
+<<<<<<< HEAD
 
+=======
+  &::after 
+>>>>>>> 26c3106933e630f45bc4a120f87cdd6716614535
 
 
 
